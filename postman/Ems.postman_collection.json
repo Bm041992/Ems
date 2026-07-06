@@ -1,0 +1,383 @@
+{
+  "info": {
+    "_postman_id": "501af85c-63e4-48c0-914e-b5f9e6c3acd8",
+    "name": "Ems",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56397791"
+  },
+  "item": [
+    {
+      "name": "User Registration",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Test User 3",
+              "type": "text",
+              "uuid": "fd66bb23-49b3-4aa1-90e4-7c76b9d9891f"
+            },
+            {
+              "key": "email",
+              "value": "test3@gmail.com",
+              "type": "text",
+              "uuid": "204d6dc4-a051-40fe-b666-048499d793e4"
+            },
+            {
+              "key": "password",
+              "value": "password",
+              "type": "text",
+              "uuid": "e2c43fbd-f2c6-4b3f-93c2-934ed0c381b1"
+            },
+            {
+              "key": "role",
+              "value": "user",
+              "type": "text",
+              "uuid": "25a19cea-47ba-4a0f-b7a2-fb0f076478bb"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get users list",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "email",
+              "value": "test1@gmail.com",
+              "type": "text",
+              "uuid": "6b47e753-180a-485c-bff5-e95f65692c5b"
+            },
+            {
+              "key": "password",
+              "value": "password",
+              "type": "text",
+              "uuid": "266bd106-b244-4469-8b0d-bf048ecf3081"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Event",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "2|D9h2T5EhhP6eX0WgR2MS8TLQVlSHfxvzCAJQ1K9ic82b972f",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "Event 5",
+              "type": "text",
+              "uuid": "0abfe483-9e72-4c5f-a743-13e0f274b177"
+            },
+            {
+              "key": "description",
+              "value": "Test Event Desc 4",
+              "type": "text",
+              "uuid": "15c52ca9-e53a-4713-bf53-2d74da71e979"
+            },
+            {
+              "key": "location",
+              "value": "Ahemdabad5",
+              "type": "text",
+              "uuid": "1b3539a7-5375-4567-aad4-120e0a7434ba"
+            },
+            {
+              "key": "event_date",
+              "value": "2026-07-25",
+              "type": "text",
+              "uuid": "2f2de92d-8c0a-4d58-9089-06e8c6f5f101"
+            },
+            {
+              "key": "status",
+              "value": "published",
+              "type": "text",
+              "uuid": "0fd36973-ca4b-4740-91bc-a390fd5208e9"
+            },
+            {
+              "key": "max_seats",
+              "value": "500",
+              "type": "text",
+              "uuid": "dbe1bac3-13e3-4787-b4e7-ca8493f577b6"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/events",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "events"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Registered Event",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "3|hjxr5K0u7SvhxnDR6OMUvJ5pC9BXBFYR6M6bu43w686b6af5",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "test",
+              "type": "text",
+              "uuid": "6112e568-3456-4b6a-ac0c-548cd7bc9843"
+            },
+            {
+              "key": "description",
+              "value": "test",
+              "type": "text",
+              "uuid": "a97500c5-3b4a-4d82-9e54-e471fe25adac"
+            },
+            {
+              "key": "location",
+              "value": "Surat",
+              "type": "text",
+              "uuid": "78f793d7-8422-44ab-9d14-99d93cc9953b"
+            },
+            {
+              "key": "event_date",
+              "value": "2026-07-08",
+              "type": "text",
+              "uuid": "42cd377d-3fdd-437a-9ab7-4e21b91160b0"
+            },
+            {
+              "key": "start_time",
+              "value": "10:00",
+              "type": "text",
+              "uuid": "0a270ff0-2675-4f06-b545-f325cc1e348a"
+            },
+            {
+              "key": "end_time",
+              "value": "11:00",
+              "type": "text",
+              "uuid": "4e41af33-13cf-482d-957f-5a23f32a6b32"
+            },
+            {
+              "key": "capacity",
+              "value": "100",
+              "type": "text",
+              "uuid": "2c93da5c-58af-452e-865b-a06f597d3c5a"
+            },
+            {
+              "key": "created_by",
+              "value": "1",
+              "type": "text",
+              "uuid": "44360202-ad16-4269-9f38-1dd96f52b0af"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/register/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "register",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Logout",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "3|hjxr5K0u7SvhxnDR6OMUvJ5pC9BXBFYR6M6bu43w686b6af5",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/logout",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Event",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "4|GSLHGOKDGGl7R5yN51Q8HGZQKPqjWbmDtzipW1Q80b7342a9",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/events/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "events",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Events",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "4|GSLHGOKDGGl7R5yN51Q8HGZQKPqjWbmDtzipW1Q80b7342a9",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "title",
+              "value": "New Event !!!",
+              "type": "text",
+              "uuid": "21fd633e-74d1-486d-855d-f75d11082ef5"
+            },
+            {
+              "key": "status",
+              "value": "Cancelled",
+              "type": "text",
+              "uuid": "8a3781a7-338c-48ff-9c49-dc89064338da"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/events/7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "events",
+            "7"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
